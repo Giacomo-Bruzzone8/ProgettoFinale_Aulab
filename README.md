@@ -1,11 +1,11 @@
 ## Welcome to the Presto Shop Project!
 
-This project is built with **Laravel**, **Bootstrap 5.3**, **Bootstrap Icons**, and integrates **Google AI Vision** to enhance the user experience.
+This project leverages Laravel, Bootstrap 5.3, Bootstrap Icons, and incorporates Google AI Vision to improve the user experience.
 
-The application provides a complete platform for managing and publishing sales ads, including a dedicated reviewers' section and advanced features such as full CRUD, user authentication, and multilingual support.
+It offers a comprehensive platform for creating and managing sales ads, featuring a dedicated reviewers' section and advanced functionalities like complete CRUD operations, user authentication, and multilingual support.
 
 ### Key Features
-- **E-commerce**: Enables the sale of used items.
+- **E-commerce**: Enables the sale of items.
 - **Working CRUD**: Complete management of ads, users, and categories.
 - **Reviewer Page**: To approve or reject published ads.
 - **Google AI Vision**: Implemented to analyze and classify uploaded images.
@@ -84,4 +84,4 @@ Access the application at [http://localhost:8000](http://localhost:8000).
 
 ---
 
-Grazie per aver scelto questo progetto! / Thank you for choosing this project!
+ Thank you for choosing this project!
