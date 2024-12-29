@@ -89,9 +89,9 @@ Access the application at [http://localhost:8000](http://localhost:8000).
 
 Here are some screenshots of the application in action:
 
-1. **Homepage**: ![Homepage Screenshot](screenshots/homepage_screenshot.png)
+1. **Homepage**: ![Homepage Screenshot](public/screenshot/homepage_screenshot.PNG)
    
-2. **Ad Submission Form**: ![Ad Submission Form](screenshots/login_screenshot.png)
+2. **Ad Submission Form**: ![Ad Submission Form](public/screenshot/login_screenshot.PNG)
    
 
 
