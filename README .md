@@ -1,3 +1,4 @@
+
 ## Welcome to the Presto Shop Project!
 
 This project leverages Laravel, Bootstrap 5.3, Bootstrap Icons, and incorporates Google AI Vision to improve the user experience.
@@ -84,4 +85,16 @@ Access the application at [http://localhost:8000](http://localhost:8000).
 
 ---
 
- Thank you for choosing this project!
+### Screenshots
+
+Here are some screenshots of the application in action:
+
+1. **Homepage**: ![Homepage Screenshot](screenshots/homepage_screenshot.png)
+   
+2. **Ad Submission Form**: ![Ad Submission Form](screenshots/login_screenshot.png)
+   
+
+
+---
+
+Thank you for choosing this project!
