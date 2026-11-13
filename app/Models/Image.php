@@ -26,6 +26,13 @@ class Image extends Model
         $path = dirname($filePath);
         $filename = basename($filePath);
         $file = "{$path}/crop_{$w}x{$h}_{$filename}";
+
+        // Se il ritaglio non è stato ancora generato (coda non attiva o job falliti),
+        // mostra l'immagine originale invece di un link rotto.
+        if (!Storage::disk('public')->exists($file)) {
+            return Storage::url($filePath);
+        }
+
         return Storage::url($file);
     }
     public function getUrl($w = null, $h = null)

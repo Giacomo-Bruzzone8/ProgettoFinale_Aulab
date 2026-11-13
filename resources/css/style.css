@@ -668,6 +668,12 @@ footer {
     object-fit: cover;
 }
 
+/* Stesse proporzioni del ritaglio 571x450 anche quando viene mostrata l'immagine originale */
+.product-photo {
+    aspect-ratio: 571 / 450;
+    object-fit: cover;
+}
+
 #carousel-thumbs {
     background: rgba(255, 255, 255, .3);
     bottom: 0;

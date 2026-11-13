@@ -26,6 +26,12 @@ class GoogleVisionSafeSearch implements ShouldQueue
      */
     public function handle(): void
     {
+        // Senza credenziali Google Cloud Vision il job viene saltato,
+        // così la catena prosegue e il ridimensionamento avviene comunque.
+        if (!file_exists(base_path('google_credential.json'))) {
+            return;
+        }
+
         $i = Image::find($this->product_image_id);
 
         if (!$i) {

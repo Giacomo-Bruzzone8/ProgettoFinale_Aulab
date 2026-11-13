@@ -65,6 +65,13 @@ class ProductCreate extends Component
             foreach ($this->images as $image) {
                 $newFileName = "products/{$this->product->id}";
                 $newImage = $this->product->images()->create(['path' => $image->store($newFileName, 'public')]);
+
+                // Il ritaglio 571x450 viene creato subito, così le card restano uniformi
+                // anche se il worker della coda non è attivo.
+                ResizeImage::dispatchSync($newImage->path, 571, 450);
+
+                // In coda: oscuramento volti (Google Vision) e nuovo ritaglio dell'immagine
+                // aggiornata, poi analisi SafeSearch ed etichette.
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path, 571, 450),
                     new GoogleVisionSafeSearch($newImage->id),
