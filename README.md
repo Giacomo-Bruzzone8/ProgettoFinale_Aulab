@@ -14,21 +14,17 @@ PHP 8.2+, Composer, Node.js 18+, MySQL in esecuzione.
 
 ## Avvio
 
-**1.** Crea un database vuoto chiamato `quantum_coders_5_lgbta`:
-
-```bash
-mysql -u root -p -e "CREATE DATABASE quantum_coders_5_lgbta"
-```
-
-**2.** Installa e configura tutto con un solo comando:
+**1.** Installa e configura tutto con un solo comando (crea anche il database):
 
 ```bash
 composer setup
 ```
 
-Se il tuo MySQL non usa `root` / `root`, il comando si ferma con un errore: correggi `DB_USERNAME` e `DB_PASSWORD` nel file `.env` appena creato e rilancialo.
+Il progetto si collega a MySQL con utente `root` e password `root`. Se il tuo MySQL usa credenziali diverse, il comando si ferma con `Access denied`: correggi `DB_USERNAME` e `DB_PASSWORD` nel file `.env` appena creato e rilancialo.
 
-**3.** Avvia il server:
+> La password è quella scelta durante l'installazione di MySQL. Con XAMPP di solito è vuota: in quel caso scrivi `DB_PASSWORD=` senza niente dopo l'uguale.
+
+**2.** Avvia il server:
 
 ```bash
 php artisan serve

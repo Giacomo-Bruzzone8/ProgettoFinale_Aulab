@@ -25,8 +25,14 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrap();
 
-        if (Schema::hasTable('categories')) {
-            View::share('categories', Category::orderBy('name')->get());
+        // Il try/catch permette ai comandi artisan di partire anche quando il database
+        // non esiste ancora (es. al primo `composer setup`, che lo crea con migrate).
+        try {
+            if (Schema::hasTable('categories')) {
+                View::share('categories', Category::orderBy('name')->get());
+            }
+        } catch (\Throwable $e) {
+            View::share('categories', collect());
         }
     }
 }
